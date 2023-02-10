@@ -1,0 +1,95 @@
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.contenedor{
+    min-width: 350px;
+    max-width: 350px;
+    padding: 50px 30px;
+    background-color: darkcyan;
+    border-radius: 30px;
+    box-shadow: 10px 10px 0 0 darkslategray;
+    
+}
+
+.fila1{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 100px;
+    background-color: aliceblue;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 3px 3px 0 0 darkslategray;
+}
+
+p{
+    font-size: 50px;
+}
+
+.fila2,
+.fila3,
+.fila4,
+.fila5,
+.fila6{
+    display: flex;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    gap: 5px;
+}
+
+button {
+    height: 50px;
+    border-width: 0;
+    font-size: 20px;
+    background-color: aliceblue;
+    color:darkslategrey;
+    box-shadow: 3px 3px 0 0 darkslategray;
+    flex: 1;
+}
+
+
+#cero {
+    flex: 2.25;
+    border-radius: 0 0 0 10px;
+}
+
+#igual {
+    border-radius: 0 0 10px 0;
+}
+
+#borrar,
+#masMenos,
+#porcentaje{
+    background-color:aquamarine;
+}
+
+#dividir,
+#sumar,
+#multiplicar,
+#restar,
+#igual{
+    background-color: lightgreen;
+}
+
+
+#borrar:active,
+#masMenos:active,
+#porcentaje:active,
+#dividir:active,
+#sumar:active,
+#multiplicar:active,
+#restar:active,
+#igual:active,
+button:active{
+    background-color:lightblue;
+    box-shadow: 0 0 0 0 darkslategray;
+}
