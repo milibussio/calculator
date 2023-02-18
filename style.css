@@ -19,20 +19,18 @@ body{
     
 }
 
-.fila1{
+.pantalla {
     display: flex;
     justify-content: right;
     align-items: center;
-    min-height: 100px;
     background-color: aliceblue;
     margin: 0 0 10px 0;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     box-shadow: 3px 3px 0 0 darkslategray;
-}
-
-p{
-    font-size: 50px;
+    min-height: 100px;
+    max-height: 100px;
+    font-size: 30px;
 }
 
 .fila2,
@@ -66,29 +64,15 @@ button {
     border-radius: 0 0 10px 0;
 }
 
-#borrar,
-#masMenos,
-#porcentaje{
+.opcion{
     background-color:aquamarine;
 }
 
-#dividir,
-#sumar,
-#multiplicar,
-#restar,
-#igual{
+.operador {
     background-color: lightgreen;
 }
 
-
-#borrar:active,
-#masMenos:active,
-#porcentaje:active,
-#dividir:active,
-#sumar:active,
-#multiplicar:active,
-#restar:active,
-#igual:active,
+.tocando,
 button:active{
     background-color:lightblue;
     box-shadow: 0 0 0 0 darkslategray;
