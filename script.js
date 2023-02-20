@@ -23,7 +23,7 @@ window.addEventListener('keydown', function(e){
 
     // para completar valores 1 y 2
 
-    if(!isNaN(tecla.textContent)){guardarValor(tecla.textContent);};
+    if(!isNaN(tecla.textContent) || tecla.textContent == "."){guardarValor(tecla.textContent);};
 
     // para resultado
 
@@ -55,7 +55,7 @@ window.addEventListener('click', function(e){
 
     // para completar valores 1 y 2
 
-    if(!isNaN(tecla.textContent)){guardarValor(tecla.textContent);};
+    if(!isNaN(tecla.textContent) || tecla.textContent == "."){guardarValor(tecla.textContent);};
 
     // para resultado
 
@@ -107,28 +107,32 @@ function guardarValor(seleccion){
 
     if (!operador && !resultado){
 
-        if((!valor1 && seleccion != 0) || valor1){
-
+        if (seleccion == "." && !valor1.includes(".")){
+            valor1 = valor1 + seleccion; 
+            cambiarPantalla(valor1);
+        }
+        
+        if((!valor1 && seleccion != 0) || valor1 && seleccion != "."){
         valor1 = valor1 + seleccion; 
         cambiarPantalla(valor1);
               
         }
-        if (seleccion == "." && !valor1.includes(".")){
-            valor1 = valor1 + seleccion; 
-            cambiarPantalla(valor1);
-      }
+
 
     } else {
 
-        if((valor2[0] != 0) || (valor2[0] == 0 && seleccion != 0) || (valor2[1] && valor2[1] != 0)){
-            valor2 = valor2 + seleccion; 
-            cambiarPantalla(valor2);    
-        }
-        
         if (seleccion == "." && !valor2.includes(".")){
             valor2 = valor2 + seleccion; 
             cambiarPantalla(valor2);
-      }
+        }
+
+        if((valor2[0] != 0) || (valor2[0] == 0 && seleccion != 0) || (valor2[1] && valor2[1] != 0)){
+            if (seleccion != "."){
+
+            valor2 = valor2 + seleccion; 
+            cambiarPantalla(valor2);    
+        }
+        }
     }};  
 
 // Para ver si es operador
